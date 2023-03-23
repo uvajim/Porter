@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "plaid-link-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/plaid/plaid-link-ios",
+      "state" : {
+        "revision" : "e0c37ef66c511a29023986c35d14c99506edacde",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "stripe-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stripe/stripe-ios-spm",
+      "state" : {
+        "revision" : "c79e3b0f11a96f7670b068fe312c33bbfdf4d132",
+        "version" : "23.5.0"
+      }
+    },
+    {
+      "identity" : "stripe-terminal-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/stripe/stripe-terminal-ios",
+      "state" : {
+        "revision" : "2acbf9d4a96a7d893aaa2fabce02ba0d5cd190a9",
+        "version" : "2.18.0"
+      }
+    }
+  ],
+  "version" : 2
+}
