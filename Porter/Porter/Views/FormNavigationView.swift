@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct FormNavigationView: View {
+    @State private var path = NavigationPath()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            NavigationLink("Business Form", destination: {BusinessFormView()}).navigationTitle("Boom")
+        }
     }
 }
 

@@ -156,7 +156,9 @@ class CheckoutViewController: UIViewController, ObservableObject {
     
     
     
-    func fetchPaymentSheet() {
+    
+    func fetchPaymentSheet() async throws->String{
+        var stripeSecret = ""
         
         // start the API session
         let config = URLSessionConfiguration.default
@@ -172,37 +174,19 @@ class CheckoutViewController: UIViewController, ObservableObject {
         request.httpMethod = "POST"
         request.httpBody = jsonBody.data(using: .utf8)
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let data = data{
-                do {
-                    
-                    guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                    else {
-                        print("ERROR")
-                        return
-                        }
-                    if let clientSecret = json["clientSecret"] as? String{
-                        self.secret = clientSecret
-                    }
-                    else{
-                        print("ERROR")
-                        return
-                    }
-                    
-                }
-                
-                catch{
-                    print(error)
-                }
-            }
-            else{
-                print("ERROR")
-                return
-            }
-            
-        }
-        task.resume()
+        print("FETCHING")
+        let (data, response) = try await URLSession.shared.data(for: request)
         
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200 else {return "Bad Request"}
+        
+        guard let json = try JSONSerialization.jsonObject(with: data) as? [String: Any] else {return "error converting data to json"}
+        
+        stripeSecret = (json["clientSecret"] as? String)!
+        print(stripeSecret)
+        
+        return stripeSecret
+   
         //
         
         // get the result.
@@ -210,11 +194,10 @@ class CheckoutViewController: UIViewController, ObservableObject {
         //set the token value
     }
     
-    func checkout(){
-        while self.secret == nil {}
-        guard let intentSecret = self.secret else {
-            return}
-        print("break 1")
+    func checkout() async throws -> PaymentSheet{
+        self.secret = try await self.fetchPaymentSheet()
+        let intentSecret = self.secret
+        print(self.secret)
         var config = PaymentSheet.Configuration()
         config.merchantDisplayName = "22A4"
         config.applePay = .init(
@@ -222,15 +205,10 @@ class CheckoutViewController: UIViewController, ObservableObject {
             merchantCountryCode: "US"
         )
         
-        let paymentSheet = PaymentSheet(paymentIntentClientSecret: intentSecret, configuration: config)
+        let paymentSheet = PaymentSheet(paymentIntentClientSecret: intentSecret!, configuration: config)
         
-        self.paymentSheet = paymentSheet
+        return paymentSheet
         }
-    
-    func pay() {
-        self.fetchPaymentSheet()
-        self.checkout()
-    }
 
 
 }

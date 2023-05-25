@@ -7,11 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4609651129EE6ACF00252EC7 /* PhotoTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4609651029EE6ACF00252EC7 /* PhotoTestView.swift */; };
+		463D89A329D6E1AA00BE0820 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 463D89A229D6E1AA00BE0820 /* FirebaseAuth */; };
+		463D89A529D6E2E800BE0820 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D89A429D6E2E800BE0820 /* LoginView.swift */; };
+		463D89A729D6E75000BE0820 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 463D89A629D6E75000BE0820 /* GoogleService-Info.plist */; };
+		463D89AC29DD070400BE0820 /* BusinessFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D89AB29DD070400BE0820 /* BusinessFormView.swift */; };
 		4640D53929C3274400ECE966 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640D53829C3274400ECE966 /* MapController.swift */; };
 		4640D53C29C332A500ECE966 /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4640D53B29C332A500ECE966 /* LinkKit */; };
 		4640D53E29C351F800ECE966 /* PlaidController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640D53D29C351F800ECE966 /* PlaidController.swift */; };
 		4640D54329C3DFCE00ECE966 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640D54229C3DFCE00ECE966 /* SettingsView.swift */; };
 		4640D54529C4DCD900ECE966 /* SwiftUILinkKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4640D54429C4DCD900ECE966 /* SwiftUILinkKitHelpers.swift */; };
+		4664755929D6DBD9007CB72D /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 4664755829D6DBD9007CB72D /* AWSAPIPlugin */; };
+		4664755B29D6DBD9007CB72D /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 4664755A29D6DBD9007CB72D /* AWSCognitoAuthPlugin */; };
+		4664755D29D6DBD9007CB72D /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 4664755C29D6DBD9007CB72D /* AWSS3StoragePlugin */; };
+		4664755F29D6DBD9007CB72D /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 4664755E29D6DBD9007CB72D /* Amplify */; };
+		466F874029DD1F5200D29490 /* AddressFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F873F29DD1F5200D29490 /* AddressFormView.swift */; };
+		466F874529DD6D3E00D29490 /* ServiceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F874429DD6D3E00D29490 /* ServiceFormView.swift */; };
+		466F874729DD72C300D29490 /* AddServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F874629DD72C300D29490 /* AddServiceView.swift */; };
 		466FEB6929C17F2900A616E0 /* StripeTerminal in Frameworks */ = {isa = PBXBuildFile; productRef = 466FEB6829C17F2900A616E0 /* StripeTerminal */; };
 		466FEB6B29C1831500A616E0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FEB6A29C1831500A616E0 /* APIClient.swift */; };
 		466FEB6E29C1931200A616E0 /* StripeControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466FEB6D29C1931200A616E0 /* StripeControllers.swift */; };
@@ -55,10 +67,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4609651029EE6ACF00252EC7 /* PhotoTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTestView.swift; sourceTree = "<group>"; };
+		463D89A429D6E2E800BE0820 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		463D89A629D6E75000BE0820 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		463D89A829D6E7FF00BE0820 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		463D89A929D6E82100BE0820 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		463D89AA29D6E82900BE0820 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		463D89AB29DD070400BE0820 /* BusinessFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessFormView.swift; sourceTree = "<group>"; };
 		4640D53829C3274400ECE966 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		4640D53D29C351F800ECE966 /* PlaidController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidController.swift; sourceTree = "<group>"; };
 		4640D54229C3DFCE00ECE966 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		4640D54429C4DCD900ECE966 /* SwiftUILinkKitHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILinkKitHelpers.swift; sourceTree = "<group>"; };
+		466F873F29DD1F5200D29490 /* AddressFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressFormView.swift; sourceTree = "<group>"; };
+		466F874429DD6D3E00D29490 /* ServiceFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFormView.swift; sourceTree = "<group>"; };
+		466F874629DD72C300D29490 /* AddServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceView.swift; sourceTree = "<group>"; };
 		466FEB6A29C1831500A616E0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		466FEB6D29C1931200A616E0 /* StripeControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeControllers.swift; sourceTree = "<group>"; };
 		46AE795629C103D600AE2518 /* Porter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Porter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +107,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				466FEB7729C23AB600A616E0 /* StripeFinancialConnections in Frameworks */,
+				463D89A329D6E1AA00BE0820 /* FirebaseAuth in Frameworks */,
+				4664755F29D6DBD9007CB72D /* Amplify in Frameworks */,
 				466FEB7529C23AB600A616E0 /* StripeCardScan in Frameworks */,
 				466FEB7329C23AB600A616E0 /* StripeApplePay in Frameworks */,
+				4664755D29D6DBD9007CB72D /* AWSS3StoragePlugin in Frameworks */,
 				466FEB7929C23AB600A616E0 /* StripeIdentity in Frameworks */,
 				466FEB7B29C23AB600A616E0 /* StripePaymentSheet in Frameworks */,
 				466FEB6929C17F2900A616E0 /* StripeTerminal in Frameworks */,
@@ -94,6 +119,8 @@
 				466FEB7D29C23AB600A616E0 /* StripePayments in Frameworks */,
 				466FEB7129C23AB600A616E0 /* Stripe in Frameworks */,
 				4640D53C29C332A500ECE966 /* LinkKit in Frameworks */,
+				4664755929D6DBD9007CB72D /* AWSAPIPlugin in Frameworks */,
+				4664755B29D6DBD9007CB72D /* AWSCognitoAuthPlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +162,8 @@
 		46AE794D29C103D600AE2518 = {
 			isa = PBXGroup;
 			children = (
+				4609651029EE6ACF00252EC7 /* PhotoTestView.swift */,
+				463D89A629D6E75000BE0820 /* GoogleService-Info.plist */,
 				46AE795829C103D600AE2518 /* Porter */,
 				46AE796929C103D700AE2518 /* PorterTests */,
 				46AE797329C103D700AE2518 /* PorterUITests */,
@@ -156,6 +185,8 @@
 		46AE795829C103D600AE2518 /* Porter */ = {
 			isa = PBXGroup;
 			children = (
+				463D89A829D6E7FF00BE0820 /* GoogleService-Info.plist */,
+				463D89A929D6E82100BE0820 /* GoogleService-Info.plist */,
 				466FEB6C29C192FD00A616E0 /* Controllers */,
 				46AE798629C105C000AE2518 /* Info.plist */,
 				46AE798329C103EA00AE2518 /* Views */,
@@ -195,6 +226,7 @@
 		46AE798329C103EA00AE2518 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				463D89AA29D6E82900BE0820 /* GoogleService-Info.plist */,
 				46AE798429C1041300AE2518 /* MapView.swift */,
 				46AE798729C10DE800AE2518 /* ListView.swift */,
 				46AE798B29C1199C00AE2518 /* ProfileView.swift */,
@@ -202,6 +234,11 @@
 				46AE798F29C1212A00AE2518 /* PaymentView.swift */,
 				46AE799129C121D000AE2518 /* CartView.swift */,
 				4640D54229C3DFCE00ECE966 /* SettingsView.swift */,
+				463D89A429D6E2E800BE0820 /* LoginView.swift */,
+				463D89AB29DD070400BE0820 /* BusinessFormView.swift */,
+				466F873F29DD1F5200D29490 /* AddressFormView.swift */,
+				466F874429DD6D3E00D29490 /* ServiceFormView.swift */,
+				466F874629DD72C300D29490 /* AddServiceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +270,11 @@
 				466FEB7C29C23AB600A616E0 /* StripePayments */,
 				466FEB7E29C23AB600A616E0 /* StripePaymentsUI */,
 				4640D53B29C332A500ECE966 /* LinkKit */,
+				4664755829D6DBD9007CB72D /* AWSAPIPlugin */,
+				4664755A29D6DBD9007CB72D /* AWSCognitoAuthPlugin */,
+				4664755C29D6DBD9007CB72D /* AWSS3StoragePlugin */,
+				4664755E29D6DBD9007CB72D /* Amplify */,
+				463D89A229D6E1AA00BE0820 /* FirebaseAuth */,
 			);
 			productName = Porter;
 			productReference = 46AE795629C103D600AE2518 /* Porter.app */;
@@ -310,6 +352,8 @@
 				466FEB6729C17F2900A616E0 /* XCRemoteSwiftPackageReference "stripe-terminal-ios" */,
 				466FEB6F29C23AB600A616E0 /* XCRemoteSwiftPackageReference "stripe-ios-spm" */,
 				4640D53A29C332A500ECE966 /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
+				4664755729D6DBD9007CB72D /* XCRemoteSwiftPackageReference "amplify-swift" */,
+				463D89A129D6E1AA00BE0820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 46AE795729C103D600AE2518 /* Products */;
 			projectDirPath = "";
@@ -329,6 +373,7 @@
 			files = (
 				46AE796129C103D700AE2518 /* Preview Assets.xcassets in Resources */,
 				46AE795E29C103D700AE2518 /* Assets.xcassets in Resources */,
+				463D89A729D6E75000BE0820 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,11 +403,17 @@
 				4640D53929C3274400ECE966 /* MapController.swift in Sources */,
 				46AE799029C1212A00AE2518 /* PaymentView.swift in Sources */,
 				46AE798529C1041300AE2518 /* MapView.swift in Sources */,
+				466F874029DD1F5200D29490 /* AddressFormView.swift in Sources */,
 				4640D53E29C351F800ECE966 /* PlaidController.swift in Sources */,
 				46AE798C29C1199C00AE2518 /* ProfileView.swift in Sources */,
 				46AE798E29C1203E00AE2518 /* MainView.swift in Sources */,
+				466F874529DD6D3E00D29490 /* ServiceFormView.swift in Sources */,
+				463D89A529D6E2E800BE0820 /* LoginView.swift in Sources */,
 				46AE798829C10DE800AE2518 /* ListView.swift in Sources */,
+				466F874729DD72C300D29490 /* AddServiceView.swift in Sources */,
 				4640D54329C3DFCE00ECE966 /* SettingsView.swift in Sources */,
+				463D89AC29DD070400BE0820 /* BusinessFormView.swift in Sources */,
+				4609651129EE6ACF00252EC7 /* PhotoTestView.swift in Sources */,
 				466FEB6E29C1931200A616E0 /* StripeControllers.swift in Sources */,
 				4640D54529C4DCD900ECE966 /* SwiftUILinkKitHelpers.swift in Sources */,
 				466FEB6B29C1831500A616E0 /* APIClient.swift in Sources */,
@@ -528,11 +579,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Porter/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth is used to enable NFC readers";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Bluetooth is needed to enable NFC reader";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you all availble nearby porters";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,11 +616,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Porter/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bluetooth is used to enable NFC readers";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Bluetooth is needed to enable NFC reader";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you all availble nearby porters";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,12 +759,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		463D89A129D6E1AA00BE0820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		4640D53A29C332A500ECE966 /* XCRemoteSwiftPackageReference "plaid-link-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/plaid/plaid-link-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.0.0;
+			};
+		};
+		4664755729D6DBD9007CB72D /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 		466FEB6729C17F2900A616E0 /* XCRemoteSwiftPackageReference "stripe-terminal-ios" */ = {
@@ -729,10 +802,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		463D89A229D6E1AA00BE0820 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 463D89A129D6E1AA00BE0820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		4640D53B29C332A500ECE966 /* LinkKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4640D53A29C332A500ECE966 /* XCRemoteSwiftPackageReference "plaid-link-ios" */;
 			productName = LinkKit;
+		};
+		4664755829D6DBD9007CB72D /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4664755729D6DBD9007CB72D /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSAPIPlugin;
+		};
+		4664755A29D6DBD9007CB72D /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4664755729D6DBD9007CB72D /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		4664755C29D6DBD9007CB72D /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4664755729D6DBD9007CB72D /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
+		4664755E29D6DBD9007CB72D /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4664755729D6DBD9007CB72D /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
 		};
 		466FEB6829C17F2900A616E0 /* StripeTerminal */ = {
 			isa = XCSwiftPackageProductDependency;

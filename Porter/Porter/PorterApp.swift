@@ -9,6 +9,9 @@ import SwiftUI
 import Foundation
 import UIKit
 import StripeTerminal
+import FirebaseCore
+import FirebaseAuth
+
 
 @main
 struct PorterApp: App {
@@ -18,6 +21,7 @@ struct PorterApp: App {
     
     init(){
         Terminal.setTokenProvider(APIClient.shared)
+        FirebaseApp.configure()
     }
     
     

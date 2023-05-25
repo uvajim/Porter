@@ -7,16 +7,47 @@
 
 import SwiftUI
 
+
+class PathStore: ObservableObject { @Published var path = NavigationPath() }
+
 struct SettingsView: View {
     
-    var linkController = PlaidController()
+    @State var showBuisnessForm = false
+    @State private var path: [Int] = []
     
-    init(){
-        linkController.fetchLinkToken()
-    }
     
     var body: some View {
-        OpenLinkButton()
+        
+        NavigationStack(path: $path){
+            VStack{
+                NavigationLink("Connect a bank account", destination: OpenLinkButton()).buttonStyle(.bordered)
+                Button("Start your business"){
+                    path.append(1)
+                }.navigationDestination(for: Int.self){ int in
+                    FormView(path: $path, count: int)
+                }
+            }
+           .navigationTitle("Settings")
+        }
+    }
+}
+
+
+struct FormView: View{
+    @Binding var path: [Int]
+    let count: Int
+
+    
+    var body: some View{
+        if (count == 1) {
+            BusinessFormView(path: $path, count: count)
+        }
+        else if (count == 2){
+            AddressFormView(path: $path, count: count)
+        }
+        else if (count == 3){
+            ServiceFormView(path: $path)
+        }
     }
 }
 

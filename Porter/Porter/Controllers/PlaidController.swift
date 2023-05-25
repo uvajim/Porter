@@ -36,7 +36,6 @@ class PlaidController: ObservableObject{
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         let task = session.dataTask(with: request) { (data, response, error) in
             if let data = data{
-                print("DATA \(data)")
                 do {
                     
                     guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]

@@ -14,18 +14,31 @@ struct CartView: View {
     
     @ObservedObject var stripePayment = CheckoutViewController()
     
-    init(){
-        stripePayment.pay()
-        StripeAPI.defaultPublishableKey = "pk_test_51MFUYkGUGzYa5sOr37A8u6F0QwM4FbHuENSgyBCf9Vm1J3dVy4zz4zVpYqmPojr6ITmrboaYykRHOS87PeOIRzOQ00SFoQyIYE"
-    }
-    
-    
-    
+    @State var checkoutFinishedLoading = false
     
     var body: some View {
-        VStack{
-            PaymentSheet.PaymentButton(paymentSheet: stripePayment.paymentSheet!, onCompletion: {_ in print("Success")}, content: {Text("Checkout")})
-            }
+        VStack {
+            if stripePayment.paymentSheet != nil{
+                        PaymentSheet.PaymentButton(paymentSheet: stripePayment.paymentSheet!, onCompletion: { result in
+                            print("Success")
+                            // modify self properties here
+                        }, content: { Text("Checkout") })
+                    } else {
+                        ProgressView()
+                    }
+        }.onAppear(perform: {
+            
+        }).task {
+            StripeAPI.defaultPublishableKey = "pk_test_51MFUYkGUGzYa5sOr37A8u6F0QwM4FbHuENSgyBCf9Vm1J3dVy4zz4zVpYqmPojr6ITmrboaYykRHOS87PeOIRzOQ00SFoQyIYE"
+                    do{
+                        stripePayment.paymentSheet = try await stripePayment.checkout()
+                    }
+                    catch{
+                        print("bad checkout")
+                    }
+            
+            checkoutFinishedLoading = true
+        }
         }
         }
 
@@ -34,6 +47,6 @@ struct CartView: View {
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView()
+        Text("wip")
     }
 }
